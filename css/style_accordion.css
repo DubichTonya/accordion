@@ -1,0 +1,335 @@
+#accordionBlock h1 {
+    margin: 0;
+    padding: 25px 15px 36px;
+
+    font: 700 59px/56px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+    color: #000;
+    text-align: center;
+}
+
+#accordionBlock h2 {
+    margin: 0;
+    margin-bottom: 30px;
+    font: 700 30px/30px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+
+    text-align: center;
+
+    color: #4d4d4d;
+}
+
+/* accordion style start ----------------------------------------------------------- */
+
+.accordion {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    overflow: hidden;
+}
+
+.accordion__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.accordion__item {
+    border-top: 2px solid #000000;
+
+    overflow: hidden;
+}
+
+.accordion__item a {
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.accordion__item:not(.selected) .accordion__title {
+    background-color: #e6e6e6;
+}
+
+.accordion__item:not(.selected) a:hover:not(.selected),
+.accordion__item:not(.selected) a:focus {
+    background-color: red;
+}
+
+.accordion__item:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.accordion__item:last-child {
+    border-bottom: 2px solid #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.accordion__title {
+    position: relative;
+}
+
+
+.accordion__item a {
+    display: block;
+    padding: 15px 45px 15px 30px;
+    box-sizing: border-box;
+
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.accordion__item a::before {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    content: '';
+    width: 15px;
+    height: 2px;
+
+    background-color: #000000;
+}
+
+.accordion__item a::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    content: '';
+    width: 15px;
+    height: 2px;
+
+    background-color: #000000;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+
+.selected.accordion__item a::after {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+.accordion__item:not(.selected) a {
+    cursor: pointer;
+}
+
+.accordion__item.selected a {
+    cursor: text;
+}
+
+.accordion__title {
+    margin: 0;
+
+    font-family: 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+
+}
+
+.accordion__overflow {
+    overflow: hidden;
+    width: 100%;
+}
+
+.accordion__content {
+    width: 100%;
+    padding: 15px;
+
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+/* accordion style end ----------------------------------------------------------- */
+
+
+/* questionChat style end ----------------------------------------------------------- */
+
+
+.questionChat {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.questionChat__block {
+    display: block;
+    padding: 15px;
+    margin: 0 auto;
+
+    max-width: 400px;
+
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+    text-align: center;
+
+    background-color: #e6e6e6;
+}
+
+.questionChat__blockTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    font: 24px/28px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.questionChat__blockTitle span {
+    position: relative;
+
+    display: inline-block;
+    padding: 10px 15px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 20px;
+
+    color: #ff0000;
+
+    border: 2px solid #ff0000;
+}
+
+.questionChat__blockTitle span::before {
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    content: '';
+    width: 12px;
+    height: 12px;
+
+    border-top: 2px solid #ff0000;
+    border-left: 2px solid #ff0000;
+    background-color: #e6e6e6;
+
+    transform: translate(-50%, -50%) skew(45deg);
+
+    box-sizing: border-box;
+}
+
+.questionChat__link {
+
+    background: #fff;
+    display: inline-block;
+    font: italic 18px/40px 'PT Serif', "Arial Narrow", Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #000;
+    padding: 5px 14px;
+    color: #000;
+    box-shadow: 0 1px 2px 0 #000;
+
+    box-sizing: border-box;
+    text-decoration: none;
+
+    -webkit-appearance: none;
+
+}
+
+.questionChat__link:hover,
+.questionChat__link:focus {
+    outline: none;
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+
+/*questionChat style end ----------------------------------------------------------- */
+
+
+/*otherSystem style start ----------------------------------------------------------- */
+
+.otherSystem {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 30px;
+    box-sizing: border-box;
+
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.otherSystem__links{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+.otherSystem__block {
+    display: block;
+    min-width: 290px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+
+    font-family: 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+    text-transform: uppercase;
+    color: #000000;
+
+    text-decoration: none;
+    outline: none;
+
+    -webkit-appearance: none;
+}
+
+.otherSystem__block:hover,
+.otherSystem__block:focus {
+    background-color: #ff0000;
+}
+
+.otherSystem__linux {}
+
+.otherSystem__macos {}
+
+.otherSystem__ios {}
+
+.otherSystem__android {}
+
+.otherSystem__windows {}
+
+/*otherSystem end -------------------------------------------------------------------- */
+
+
+/* media 448px  start--------------------------------- */
+
+@media(max-width: 448px) {
+    #accordionBlock h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    #accordionBlock h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .questionChat__blockTitle {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+/* media 448px  end--------------------------------- */
