@@ -34,7 +34,7 @@
 
     border-left: 2px solid #000000;
     border-right: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
@@ -59,14 +59,14 @@
 }
 
 .accordion__item:first-child {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .accordion__item:last-child {
     border-bottom: 2px solid #000000;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .accordion__title {
@@ -161,7 +161,7 @@
     box-sizing: border-box;
 
     border: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .questionChat__block {
@@ -172,7 +172,7 @@
     max-width: 400px;
 
     border: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 
     text-align: center;
 
@@ -260,7 +260,7 @@
     box-sizing: border-box;
 
     border: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 
     text-align: center;
 }
@@ -279,7 +279,7 @@
     padding: 15px;
 
     border: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #e6e6e6;
 
     font-family: 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
