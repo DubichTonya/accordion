@@ -69,7 +69,8 @@ function accordion(elem) {
 
 // --------------------Определение платформы пользователя-------------------------
 
-alert(navigator.platform);
+var md = new MobileDetect(window.navigator.userAgent);
+alert( md.os() )
 
 
 // ----------------------------- конец определения платформы пользователя --------------
