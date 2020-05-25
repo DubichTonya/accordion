@@ -69,11 +69,11 @@ function accordion(elem) {
 
 // --------------------Определение платформы пользователя-------------------------
 
-var md = new MobileDetect(window.navigator.userAgent);
+// var md = new MobileDetect(window.navigator.userAgent);
+// var mdStr = md.toString();
+// console.log(md)
 var userPlatform =  window.navigator.platform;
-alert(userPlatform);
-// var platform = md.os() || user.platform;
-// alert( platform )
+alert(userPlatform)
 
 
 // ----------------------------- конец определения платформы пользователя --------------
