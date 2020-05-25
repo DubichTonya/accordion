@@ -71,7 +71,7 @@ function accordion(elem) {
 
 var md = new MobileDetect(window.navigator.userAgent);
 var userPlatform =  window.navigator.platform;
-alert(userplatform)
+alert(userPlatform);
 // var platform = md.os() || user.platform;
 // alert( platform )
 
