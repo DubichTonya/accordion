@@ -19,6 +19,18 @@
 
 /* accordion style start ----------------------------------------------------------- */
 
+.platform-accordion {
+    display: none;
+}
+
+.block-show {
+    display: block;
+}
+
+.otherSystem__block.hidden-block {
+    display: none;
+}
+
 .accordion {
     max-width: 850px;
     margin: 0 auto;
@@ -26,6 +38,7 @@
 
     overflow: hidden;
 }
+
 
 .accordion__list {
     width: 100%;
