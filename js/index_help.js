@@ -67,17 +67,40 @@ function accordion(elem) {
 
 }
 
-// --------------------Определение платформы пользователя-------------------------
-
-// var md = new MobileDetect(window.navigator.userAgent);
-// var mdStr = md.toString();
-// console.log(md)
-var userPlatform =  window.navigator.platform;
-alert(userPlatform)
 
 
 // ----------------------------- конец определения платформы пользователя --------------
 
+  let result = '';
+
+let platform = function(){
+  let val =  navigator.userAgent;
+
+  if(val.match('Windows')){
+    result = 'Windows'
+  } else if(val.match('Android')){
+    result = 'Android'
+  } else if(val.match('iPhone')){
+    result = 'iPhone'
+  } else if(val.match('Linux')){
+    result = 'Linux'
+  } else if (val.match('Mac OS')){
+    result = 'Mac OS'
+  }
+
+  return result
+}
+
+
+platform()
+document.querySelector('.out').innerHTML = result;
+document.querySelector('.out').style.textAlign = 'center';
+document.querySelector('.out').style.fontSize = '36px';
+
+console.log(navigator.userAgent);
+console.log(platform());
+
+console.log(result);
 
 // --------------- function accordion end---------------------
 
