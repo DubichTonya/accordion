@@ -1,23 +1,44 @@
+body {
+    background-image: url('https://www.yburlan.ru/sites/all/themes/newyburlan/new_images/body-bg.png');
+}
+
 #accordionBlock h1 {
     margin: 0;
     padding: 25px 15px 36px;
 
-    font: 700 59px/56px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+    font: 59px/56px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
     color: #000;
+    font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #accordionBlock h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font: 700 30px/30px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
 
     text-align: center;
 
-    color: #4d4d4d;
+    color: #000;
 }
 
 /* accordion style start ----------------------------------------------------------- */
+
+.accordion-wrapper {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    max-width: 930px;
+    background-color: #fff;
+    padding: 0px 30px 50px;
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+    border-width: 50px 20px 0;
+    
+}
 
 .platform-accordion {
     display: none;
@@ -32,11 +53,10 @@
 }
 
 .accordion {
-    max-width: 850px;
+    box-shadow: -40px 0 0 40px 40px #ababab;
     margin: 0 auto;
-    margin-bottom: 50px;
+    max-width: 870px;
 
-    overflow: hidden;
 }
 
 
@@ -44,15 +64,16 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 
-    border-left: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-radius: 5px;
+    border-left: 1px solid #ababab;
+    border-right: 1px solid #ababab;
     box-sizing: border-box;
+    box-shadow: 0px 0 120px 20px #ababab;
 }
 
 .accordion__item {
-    border-top: 2px solid #000000;
+    border-top: 1px solid #ababab;
 
     overflow: hidden;
 }
@@ -69,17 +90,12 @@
 .accordion__item:not(.selected) a:hover:not(.selected),
 .accordion__item:not(.selected) a:focus {
     background-color: red;
+     transition: 0.3s linear;
 }
 
-.accordion__item:first-child {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
 
 .accordion__item:last-child {
-    border-bottom: 2px solid #000000;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid #ababab;
 }
 
 .accordion__title {
@@ -167,32 +183,41 @@
 
 
 .questionChat {
-    max-width: 850px;
+    position: relative;
+    max-width: 730px;
     margin: 0 auto;
     margin-bottom: 50px;
-    padding: 30px 15px;
     box-sizing: border-box;
-
-    border: 2px solid #000000;
-    border-radius: 5px;
+    padding: 16px;
 }
 
 .questionChat__block {
+    position: relative;
+    width: 100%;
     display: block;
-    padding: 15px;
+    
     margin: 0 auto;
-
-    max-width: 400px;
-
-    border: 2px solid #000000;
-    border-radius: 5px;
-
     text-align: center;
 
-    background-color: #e6e6e6;
+    background-color: #f4f4f4;
+}
+
+.questionChat__block img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.questionChat__blockWrapper {
+    right: 50px;
+    top: 50px;
+    position: absolute;
 }
 
 .questionChat__blockTitle {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,19 +240,20 @@
 
     color: #ff0000;
 
-    border: 2px solid #ff0000;
+    border: 1px solid #ff0000;
+    background-color: #e6e6e6;
 }
 
 .questionChat__blockTitle span::before {
     position: absolute;
-    left: -2px;
+    left: -1px;
     top: 50%;
     content: '';
     width: 12px;
     height: 12px;
 
-    border-top: 2px solid #ff0000;
-    border-left: 2px solid #ff0000;
+    border-top: 1px solid #ff0000;
+    border-left: 1px solid #ff0000;
     background-color: #e6e6e6;
 
     transform: translate(-50%, -50%) skew(45deg);
@@ -240,7 +266,7 @@
     background: #fff;
     display: inline-block;
     font: italic 18px/40px 'PT Serif', "Arial Narrow", Arial, Helvetica, sans-serif;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ababab;
     padding: 5px 14px;
     color: #000;
     box-shadow: 0 1px 2px 0 #000;
@@ -257,6 +283,7 @@
     outline: none;
     background-color: #ff0000;
     color: #ffffff;
+    transition: 0.3s linear;
 }
 
 
@@ -266,21 +293,24 @@
 /*otherSystem style start ----------------------------------------------------------- */
 
 .otherSystem {
-    max-width: 850px;
+    max-width: 930px;
     margin: 0 auto;
     margin-bottom: 50px;
-    padding: 30px;
+    padding: 50px 30px;
     box-sizing: border-box;
 
-    border: 2px solid #000000;
-    border-radius: 5px;
+    border: 1px solid #ababab;
 
     text-align: center;
+    background-color: #fff;
 }
 
 .otherSystem__links{
     display: flex;
     flex-wrap: wrap;
+
+    padding: 50px 30px;
+    box-shadow: 0px 0 120px 20px #ababab;
 
     justify-content: space-evenly;
 }
@@ -290,9 +320,9 @@
     min-width: 290px;
     margin-bottom: 20px;
     padding: 15px;
+    box-sizing: border-box;
 
-    border: 2px solid #000000;
-    border-radius: 5px;
+    border: 1px solid #ababab;
     background-color: #e6e6e6;
 
     font-family: 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
@@ -311,17 +341,8 @@
 .otherSystem__block:hover,
 .otherSystem__block:focus {
     background-color: #ff0000;
+    transition: 0.3s linear;
 }
-
-.otherSystem__linux {}
-
-.otherSystem__macos {}
-
-.otherSystem__ios {}
-
-.otherSystem__android {}
-
-.otherSystem__windows {}
 
 /*otherSystem end -------------------------------------------------------------------- */
 
@@ -346,3 +367,37 @@
 }
 
 /* media 448px  end--------------------------------- */
+
+
+/* media 600px  start--------------------------------- */
+
+@media(max-width: 600px) {
+
+    .otherSystem__block {
+        display: block;
+        min-width: 260px;
+    }
+
+    .questionChat__blockWrapper {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 15px;
+    }
+
+    .accordion-wrapper {
+        padding: 0px 0px 50px;
+    }
+
+    .otherSystem {
+        padding: 50px 15px 15px;
+    }
+
+    .otherSystem__links {
+        padding: 50px 0;
+    }
+
+}
+
+
+/* media 600px  end--------------------------------- */
