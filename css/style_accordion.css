@@ -2,6 +2,15 @@ body {
     background-image: url('https://www.yburlan.ru/sites/all/themes/newyburlan/new_images/body-bg.png');
 }
 
+ .strong_txt {
+    font-weight: 600;
+    color: #000;
+}
+
+.red_txt {
+    color: #ff0000;
+}
+
 #accordionBlock h1 {
     margin: 0;
     padding: 25px 15px 36px;
@@ -23,6 +32,9 @@ body {
     color: #000;
 }
 
+.visually-hidden {
+    display: none;
+}
 /* accordion style start ----------------------------------------------------------- */
 
 .accordion-wrapper {
@@ -37,7 +49,7 @@ body {
 
     border: 1px solid transparent;
     border-width: 50px 20px 0;
-    
+
 }
 
 .platform-accordion {
@@ -53,9 +65,8 @@ body {
 }
 
 .accordion {
-    box-shadow: -40px 0 0 40px 40px #ababab;
     margin: 0 auto;
-    max-width: 870px;
+    width: 100%;
 
 }
 
@@ -90,7 +101,7 @@ body {
 .accordion__item:not(.selected) a:hover:not(.selected),
 .accordion__item:not(.selected) a:focus {
     background-color: red;
-     transition: 0.3s linear;
+    transition: 0.3s linear;
 }
 
 
@@ -103,7 +114,7 @@ body {
 }
 
 
-.accordion__item a {
+.accordion__item  a {
     display: block;
     padding: 15px 45px 15px 30px;
     box-sizing: border-box;
@@ -155,10 +166,9 @@ body {
 
 .accordion__title {
     margin: 0;
-
     font-family: 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22.4px;
 
 }
@@ -195,7 +205,7 @@ body {
     position: relative;
     width: 100%;
     display: block;
-    
+
     margin: 0 auto;
     text-align: center;
 
@@ -305,7 +315,7 @@ body {
     background-color: #fff;
 }
 
-.otherSystem__links{
+.otherSystem__links {
     display: flex;
     flex-wrap: wrap;
 
@@ -327,7 +337,7 @@ body {
 
     font-family: 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 22.4px;
     text-transform: uppercase;
     color: #000000;
@@ -347,27 +357,60 @@ body {
 /*otherSystem end -------------------------------------------------------------------- */
 
 
-/* media 448px  start--------------------------------- */
+/* list-style---------------------------------------------------------------------------- */
 
-@media(max-width: 448px) {
-    #accordionBlock h1 {
-        font-size: 36px;
-        line-height: 44px;
-    }
 
-    #accordionBlock h2 {
-        font-size: 24px;
-        line-height: 28px;
-    }
+/* font-family: Arial, Helvetica, sans-serif; */
+.accordion__content {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.accordion__content a {
+    font: italic 14px Arial, times, serif;
+    color: #ff0000;
+    text-transform: none;
+    display: inline-block;
+    padding: 0;
 
-    .questionChat__blockTitle {
-        font-size: 18px;
-        line-height: 24px;
-    }
 }
 
-/* media 448px  end--------------------------------- */
+.accordion__content a::after,
+.accordion__content a::before {
+    display: none;
+}
 
+.accordion__content ol {
+    margin-left: 42px;
+    padding: 16px 0 0;
+    line-height: 22px;
+    overflow: hidden;
+    counter-reset: item;
+    color: #6f6f6f;
+}
+
+.accordion__content li {
+    padding: 0 0 0 30px;
+    margin: 0 0 23px;
+    line-height: 1.5;
+}
+
+.accordion__content li::before {
+    float: left;
+    font: 24px/24px 'PT Sans Narrow', "Arial Narrow", Arial, Helvetica, sans-serif;
+    width: 30px;
+    margin: 0 0 0 -30px;
+    color: #ff0000;
+    content: counters(item, ".")")";
+    counter-increment: item;
+}
+
+.accordion__content h4{
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* list-style end   ---------------------------------------------------------------------- */
 
 /* media 600px  start--------------------------------- */
 
@@ -397,7 +440,56 @@ body {
         padding: 50px 0;
     }
 
+    .accordion__content ol {
+        margin-left: 10px;
+    }
+
+
 }
 
 
 /* media 600px  end--------------------------------- */
+
+
+/* media 448px  start--------------------------------- */
+
+@media(max-width: 448px) {
+    #accordionBlock h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    #accordionBlock h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .questionChat__blockTitle {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .accordion__content h4 {
+        margin-left: 10px;
+    }
+
+    .accordion__content {
+        padding: 15px 10px;
+    }
+
+    .accordion__content ol {
+        margin-left: 0;
+    }
+
+    .otherSystem__block,
+    .accordion__title {
+        font-size: 16px;
+    }
+}
+
+/* media 448px  end--------------------------------- */
+
+
+
+
+
+
